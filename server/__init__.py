@@ -21,6 +21,7 @@ logger.info("-------------------------------------------------------------------
 
 # create Media Cloud api client for fetching model info and models themselves
 mc = mediacloud.api.MediaCloud(os.getenv("MEDIA_CLOUD_API_KEY"))
+mc.V2_API_URL = os.getenv('MEDIA_CLOUD_API_URL')
 
 # Set up sentry logging service
 sentry_dsn = os.getenv('SENTRY_DSN')
